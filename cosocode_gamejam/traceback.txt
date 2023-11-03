@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/bb_route.rpy", line 4, in script
+    define MC_Name = mc
+  File "game/bb_route.rpy", line 4, in <module>
+    define MC_Name = mc
+NameError: name 'mc' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/bb_route.rpy", line 4, in script
+    define MC_Name = mc
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\ast.py", line 2508, in execute
+    self.set()
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\ast.py", line 2522, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/bb_route.rpy", line 4, in <module>
+    define MC_Name = mc
+NameError: name 'mc' is not defined
+
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.1.1.23060707
+cosocode_gamejam 1.0
+Fri Nov  3 13:57:09 2023

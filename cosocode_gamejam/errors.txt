@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/bb_route.rpy", line 4: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+        "MC_Name
+
+Ren'Py Version: Ren'Py 8.1.1.23060707
+Fri Nov  3 13:54:21 2023
