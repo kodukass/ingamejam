@@ -64,6 +64,28 @@ label bb_route:
     define config.adv_nvl_transition = None
     define config.nvl_adv_transition = Dissolve(0.3)
 
+# ma ei saa aru kuidas seda tööle saada korralikult rn :(
+    image phone animated:
+            "alarm1"
+            pause 0.5
+            "alarm2"
+            pause 0.8
+            repeat
+
+    screen phoneAlarm:
+
+        imagebutton:
+                xanchor 0.5
+                yanchor 0.5
+                xpos 650
+                ypos 322
+                idle "phone buzz"
+                hover "alarm3"
+                action Jump('one') 
+
+    show phone animated
+    show screen phoneAlarm
+
     nvl_narrator "Nighten added Eileen to the group"
     n_nvl e2m2_b "Hey! Welcome to the demo Eileen!"
     e_nvl "who's this?"
