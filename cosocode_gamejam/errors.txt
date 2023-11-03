@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/conf.rpy", line 18: invalid syntax
-    "bgs/screen_libraryleftdark.png", zoom=0.33)
-                                           ^
+File "game/conf.rpy", line 98: 'Dissolve' is not a keyword argument or valid child of the hotspot statement.
+    hotspot(1122, 307, 566, 545) action Jump ("gb_route") hovered ShowTransient("the_img", img="choose_character_hovergb.png") unhovered Hide("the_img") Dissolve
+                                                                                                                                                                 ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Fri Nov  3 16:59:07 2023
+Fri Nov  3 17:54:13 2023
