@@ -1,28 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/bb_route.rpy", line 4, in script
-    define MC_Name = mc
-  File "game/bb_route.rpy", line 4, in <module>
-    define MC_Name = mc
-NameError: name 'mc' is not defined
+  File "game/bb_route.rpy", line 26, in script
+    n_nvl "No problem, you must be quite busy!"
+Exception: Sayer 'n_nvl' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/bb_route.rpy", line 4, in script
-    define MC_Name = mc
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\ast.py", line 2508, in execute
-    self.set()
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\ast.py", line 2522, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/bb_route.rpy", line 4, in <module>
-    define MC_Name = mc
-NameError: name 'mc' is not defined
+  File "game/bb_route.rpy", line 26, in script
+    n_nvl "No problem, you must be quite busy!"
+  File "C:\Users\Laptop\Documents\CREATIVE\Mängude tegemine\renpy-8.1.3-sdk\renpy\ast.py", line 890, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Laptop\Documents\CREATIVE\Mängude tegemine\renpy-8.1.3-sdk\renpy\ast.py", line 783, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'n_nvl' is not defined.
 
-Windows-10-10.0.22621 AMD64
-Ren'Py 8.1.1.23060707
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.1.3.23091805
 cosocode_gamejam 1.0
-Fri Nov  3 13:57:09 2023
+Fri Nov  3 16:30:18 2023
