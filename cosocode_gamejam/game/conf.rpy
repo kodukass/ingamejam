@@ -33,6 +33,10 @@ init -1 python:
 
 init:
     $ mc = 0
+    # # Fades to black, then to the new scene.
+    $ fade = Fade(0.7, 0, 0.7)
+    # # Dissolves between old and new scenes.
+    $ dissolve = Dissolve(0.5)
 
 #sshake
 init:
@@ -95,5 +99,8 @@ init:
 screen choose_character_buttons():
     imagemap:
         ground choose_character
-        hotspot(949, 255, 103, 85) action Jump ("sink")
-        hotspot(640, 515, 91, 86) action Jump ("shower")
+        hotspot(1122, 307, 566, 545) action Jump ("gb_route") hovered ShowTransient("the_img", img="choose_character_hovergb.png") unhovered Hide("the_img")
+        hotspot(246, 295, 552, 544) action Jump ("bb_route") hovered ShowTransient("the_img", img="choose_character_hoverbb.png") unhovered Hide("the_img")
+
+screen the_img(img):
+    add img
