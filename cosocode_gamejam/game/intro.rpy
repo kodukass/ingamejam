@@ -2,6 +2,13 @@ label intro:
     $ quick_menu = False
     #show nighten e1m2_b
 
+    define bb = Character("boneBeast", image="boneBeast")
+    define gb = Character("gelatoBeast", image="gelatoBeast")
+
+    # NVL characters are used for the phone texting
+    define bb_nvl = Character("boneBeast", kind=nvl, image="phone_bb_icon", callback=Phone_SendSound)
+    define gb_nvl = Character("GelatoBeast", kind=nvl, image="phone_bg_icon", callback=Phone_ReceiveSound)
+
     #nvl_narrator "Nighten added Eileen to the group"
     #n_nvl e2m2_b "Hey! Welcome to the demo Eileen!"
     #e_nvl "who's this?"
