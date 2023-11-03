@@ -15,19 +15,25 @@ label start:
     # images directory to show it.
 
     scene bg room
+    "choose route"
+    menu:
+        "gb route":
+            jump gb_route
+        "bb route":
+            jump bb_route
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    #show eileen happy
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    #e "You've created a new Ren'Py game."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    #e "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
 
-    return
+    #return
