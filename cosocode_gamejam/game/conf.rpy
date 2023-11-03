@@ -16,6 +16,8 @@ define bb = Character("BB", color="#5f953e", image="bb")
 define gb = Character("MC_Name", color="#8e5e9e", image="gb")
 
 define choose_character="choose_character.png"
+define bg_1sept="bg_1sept.png"
+define bg_black="bg_black.png"
 
 define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.3)
