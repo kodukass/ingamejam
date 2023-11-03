@@ -1,6 +1,6 @@
 label gb_route:
     "gb route"
-    $ MC_Name = bb
+    $ MC_Name = gb
     $ mc = "GB"
     $ quick_menu = False
     show nighten e1m2_b
