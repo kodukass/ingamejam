@@ -4,7 +4,7 @@ define nvl_mode = "phone"  ##Allow the NVL mode to become a phone conversation
 define MC_Name = "mc" ##The name of the main character, used to place them on the screen
 
 init -1 python:
-    phone_position_x = 0.3
+    phone_position_x = 0.5
     phone_position_y = 0.5
 
     def Phone_ReceiveSound(event, interact=True, **kwargs):
@@ -151,7 +151,7 @@ style phoneFrame is default
 
 style phoneFrame_frame:
     background Transform("phone_background.png", xcenter=0.5,yalign=0.5)
-    #foreground Transform("phone_foreground.png", xcenter=0.5,yalign=0.5)
+    foreground Transform("phone_foreground.png", xcenter=0.5,yalign=0.5)
     
     ysize 815
     xsize 495

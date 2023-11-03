@@ -17,6 +17,8 @@ label start:
     scene bg room
     "choose route"
     menu:
+        "intro":
+            jump intro
         "gb route":
             jump gb_route
         "bb route":

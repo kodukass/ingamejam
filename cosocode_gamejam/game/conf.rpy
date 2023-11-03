@@ -3,7 +3,7 @@
 #gb route stuff
 
 define bb_nvl = Character("BB", kind=nvl, color="#7dcc4b", image="bb", callback=Phone_ReceiveSound)
-define gb_nvl = Character("GB", kind=nvl, color="#683e95", image="gb", callback=Phone_SendSound)
+define gb_nvl = Character("mc", kind=nvl, color="#683e95", image="gb", callback=Phone_SendSound)
 
 #bb route stuff (not important rn)
 
@@ -13,7 +13,9 @@ define gb_nvl = Character("GB", kind=nvl, color="#683e95", image="gb", callback=
 #misc
 
 define bb = Character("BB", color="#5f953e", image="bb")
-define gb = Character("GB", color="#8e5e9e", image="gb")
+define gb = Character("MC_Name", color="#8e5e9e", image="gb")
+
+define choose_character="choose_character.png"
 
 define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.3)
@@ -89,3 +91,9 @@ init python:
     import random
 init:
     $ sshake = Shake((0, 0, 0, 0), 1.0, dist=30)
+
+screen choose_character_buttons():
+    imagemap:
+        ground choose_character
+        hotspot(949, 255, 103, 85) action Jump ("sink")
+        hotspot(640, 515, 91, 86) action Jump ("shower")

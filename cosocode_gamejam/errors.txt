@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/bb_route.rpy", line 4: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-        "MC_Name
+File "game/conf.rpy", line 18: invalid syntax
+    "bgs/screen_libraryleftdark.png", zoom=0.33)
+                                           ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Fri Nov  3 13:54:21 2023
+Fri Nov  3 16:59:07 2023

@@ -1,15 +1,11 @@
 label bb_route:
     "bb route"
-    $ mc = "BB"
-    $ MC_Name = mc
-    "[MC_Name]"
-    "[mc]"
     # Main script for the demo!
 
-    define n = Character("Nighten", image="nighten")
+    define n = Character("mc", image="nighten")
 
     # NVL characters are used for the phone texting
-    define n_nvl = Character("Nighten", kind=nvl, image="nighten", callback=Phone_SendSound)
+    define n_nvl = Character("mc", kind=nvl, image="nighten", callback=Phone_SendSound)
     define e_nvl = Character("Eileen", kind=nvl, callback=Phone_ReceiveSound)
 
     define config.adv_nvl_transition = None
