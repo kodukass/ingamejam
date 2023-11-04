@@ -74,6 +74,9 @@ label bb_route:
     define config.adv_nvl_transition = None
     define config.nvl_adv_transition = Dissolve(0.3)
 
+    transform transparent:
+        alpha 0.0
+
 # ma ei saa aru kuidas seda tööle saada korralikult rn :(
     image phone animated:
             "alarm1"
@@ -85,17 +88,23 @@ label bb_route:
     screen phoneAlarm:
 
         imagebutton:
-                xanchor 0.5
-                yanchor 0.5
-                xpos 650
-                ypos 322
-                idle "phone buzz"
-                hover "alarm3"
-                action Jump('one') 
+            focus_mask True
+            idle "alarm3"
+            hover "alarm4"
+            action Jump("one") 
+
+    screen alarmSlider:
+        frame:
+            has hbox
+
+            vbar value Preference("sound volume")
 
     show phone animated
-    show screen phoneAlarm
+    call screen phoneAlarm
 
+# minigame here to shut off alarm?
+# smth with pulling the thingy to the side?
+label one:
     nvl_narrator "Nighten added Eileen to the group"
     n_nvl e2m2_b "Hey! Welcome to the demo Eileen!"
     e_nvl "who's this?"
