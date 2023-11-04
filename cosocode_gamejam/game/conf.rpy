@@ -39,6 +39,7 @@ init:
     $ fade = Fade(0.7, 0, 0.7)
     # # Dissolves between old and new scenes.
     $ dissolve = Dissolve(0.5)
+    $ fastdissolve = Dissolve(0.2)
 
 #sshake
 init:

@@ -10,27 +10,34 @@ label bb_route:
     pause
     show bg_black with Dissolve(1.0)
     hide bg_1sept
-    #(Insert very annoying alarm beeping)
+    
+    #play sound "audio/???"                         #(Insert very annoying alarm beeping)
     bb "Mnghh....."
     
     hide bg_black with Dissolve(1.0)
+    #--------------------------------------
+
     #(turning off alarm minigame?)
+
+    #--------------------------------------
     show bg_black with Dissolve(1.0)
     hide bg_black with Dissolve(1.0)
     bb "I really don't want to go.."
-    #(sheets ruffling sound effect)
-    #(insert room view and bro rubbing his eyes)
-    #show ??? with dissolve
+    #play sound "audio/???"                         #(sheets ruffling sound effect)
+    
+    #show ??? with dissolve                         #(insert room view and bro rubbing his eyes)
     bb "Right...new school...new...me?" 
     bb "As if."
-    #(look in mirror)
-    #show ??? with dissolve
+    
+    #show ??? with dissolve                         #(look in mirror)
     bb "Let's just get this over with."
 
-    #(insert really dramatic low perspective of a school to make it look intimidating)
-    #(insert nervous side view of B)
+    #show ??? with dissolve                         #(insert really dramatic low perspective of a school to make it look intimidating)
+    #show ??? with dissolve                         #(insert nervous side view of B)
     bb "Why did I have to be put into such a massive school? "
     bb "How am I even meant to figure out where all my classes are? I don't know a single person here, so I can't even ask anyone!"
+    
+    #---------------------------------
     #(Overlapping text to show distress)
     
     #text ("What if I walk into the wrong classroom and don't notice?")
@@ -38,10 +45,13 @@ label bb_route:
     #“ I'll look ridiculous!”
     #“ What if they all start hating me?”
     #“ It's only the first day, I can't make a fool of myself immediately!! “
-    #“Come on, Laura, get ahold of yourself!!“
-    #(insert slightly startling transition and scary B colour scheme hallway)
-    #„What was the room I was told to go to? 100...106? Or was it 108…”
-    #“ How are these classrooms even numbered?”
+    #-----------------------------------
+
+    bb "Come on, Laura, get ahold of yourself!!"
+    #show ??? with fastdissolve                     #(insert slightly startling transition and scary B colour scheme hallway)
+    bb "What was the room I was told to go to?" 
+    bb "100...106? Or was it 108…"
+    bb "How are these classrooms even numbered?"
     #“ There can't be over a hundred classrooms in this building...can there?”
     #“ How many students is that? “
     #“Hundreds...hundreds and hundreds of students...any one of them could see me, and I wouldn't even know...“
