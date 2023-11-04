@@ -1,3 +1,5 @@
 label gb_route:
-    "gb route"
+    
+    show bg_1sept with Dissolve(1.0)
+    pause
     
