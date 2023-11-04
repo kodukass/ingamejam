@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/bb_route.rpy", line 316: expected statement.
-    sh
-      ^
+File "game/screens.rpy", line 567: is not terminated with a newline. (Check strings and parenthesis.)
+                text _(Programmer: Karol, who wrote code for the GB route and researched info for encountered problems.
 
-Ren'Py Version: Ren'Py 8.1.1.23060707
-Sat Nov  4 16:16:12 2023
+Ren'Py Version: Ren'Py 8.1.3.23091805
+Sat Nov  4 19:45:07 2023

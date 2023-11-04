@@ -559,7 +559,15 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]\n\n")
+
+            text _("Head Writer: Joosep, who wrote all of the script for the game, drew all art for the BB route, contributed to many design elements and details and helped with sound design.\n")
+            
+            text _("Art Director: Mika, who made initial concept art of the characters, all art for the GB route and all of the music.\n")
+            
+            text _("Head Programmer: Emma, who established the base framework for the program, wrote code for the BB route, and helped with sound design.\n")
+            
+            text _("Programmer: Karol, who wrote code for the GB route and researched info for encountered problems.\n")
 
 
 style about_label is gui_label
