@@ -17,9 +17,14 @@ label bb_route:
     hide bg_black with Dissolve(1.0)
     #--------------------------------------
 
-    #(turning off alarm minigame?)
+    show phone animated
+    call screen phoneAlarm
 
     #--------------------------------------
+    
+label next:
+    hide phone animated
+    
     show bg_black with Dissolve(1.0)
     hide bg_black with Dissolve(1.0)
     bb "I really don't want to go.."
@@ -61,46 +66,7 @@ label bb_route:
     #(minigame to focus on their words(just quick clicking game with timelimit))
 
 
-    #------------------------------------------------------
-    "bb route"
-    # Main script for the demo!
-
-    define n = Character("mc", image="nighten")
-
-    # NVL characters are used for the phone texting
-    define n_nvl = Character("mc", kind=nvl, image="nighten", callback=Phone_SendSound)
-    define e_nvl = Character("Eileen", kind=nvl, callback=Phone_ReceiveSound)
-
-    define config.adv_nvl_transition = None
-    define config.nvl_adv_transition = Dissolve(0.3)
-
-    transform transparent:
-        alpha 0.0
-
-# ma ei saa aru kuidas seda tööle saada korralikult rn :(
-    image phone animated:
-            "alarm1"
-            pause 0.5
-            "alarm2"
-            pause 0.8
-            repeat
-
-    screen phoneAlarm:
-
-        imagebutton:
-            focus_mask True
-            idle "alarm3"
-            hover "alarm4"
-            action Jump("one") 
-
-    screen alarmSlider:
-        frame:
-            has hbox
-
-            vbar value Preference("sound volume")
-
-    show phone animated
-    call screen phoneAlarm
+    
 
 # minigame here to shut off alarm?
 # smth with pulling the thingy to the side?

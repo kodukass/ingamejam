@@ -9,3 +9,5 @@ label start:
             jump gb_route
         "bb route":
             jump bb_route
+        "test":
+            jump test

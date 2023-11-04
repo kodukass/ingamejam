@@ -1,128 +1,41 @@
-Fri Nov  3 19:29:14 2023
+Sat Nov  4 10:11:35 2023
 Windows-10-10.0.22621
 Ren'Py 8.1.1.23060707
  
 
-Bootstrap to the start of init.init. took 0.04s
+Bootstrap to the start of init.init. took 0.06s
 Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.31s
-Loading save slot metadata. took 0.04s
+Loader init. took 0.05s
+Loading error handling. took 0.05s
+Loading script. took 0.32s
+Loading save slot metadata. took 0.06s
 Loading persistent. took 0.00s
-
-File "game/bb_route.rpy", line 36: expected statement.
-    „What if I walk into the wrong classroom and don´t notice?”
-          ^
-
-File "game/bb_route.rpy", line 37: expected statement.
-    “ They´ll all think I´m an idiot.”
-                                    ^
-
-File "game/bb_route.rpy", line 38: expected statement.
-    “ I´ll look ridiculous!”
-                          ^
-
-File "game/bb_route.rpy", line 39: expected statement.
-    “ What if they all start hating me?”
-           ^
-
-File "game/bb_route.rpy", line 40: expected statement.
-    “ It´s only the first day, I can´t make a fool of myself immediately!! “
-                             ^
-
-File "game/bb_route.rpy", line 41: expected statement.
-    “Come on, Laura, get ahold of yourself!!“
-            ^
-
-File "game/bb_route.rpy", line 42: expected statement.
-    (insert slightly startling transition and scary B colour scheme hallway)
-                                                                            ^
-
-File "game/bb_route.rpy", line 43: expected statement.
-    „What was the room I was told to go to? 100...106? Or was it 108…”
-                                          ^
-
-File "game/bb_route.rpy", line 44: expected statement.
-    “ How are these classrooms even numbered?”
-                                            ^
-
-File "game/bb_route.rpy", line 45: expected statement.
-    “ There can´t be over a hundred classrooms in this building...can there?”
-                                               ^
-
-File "game/bb_route.rpy", line 46: expected statement.
-    “ How many students is that? “
-                               ^
-
-File "game/bb_route.rpy", line 47: expecting name after dot.
-    “Hundreds...hundreds and hundreds of students...any one of them could see me, and I wouldn´t even know...“
-              ^
-
-File "game/bb_route.rpy", line 48: expected statement.
-    (mingi asi, nt blur effect, näitab kuidas ta end tunneb.Visual representation of overwhelming things. Loud noises, lights, many people, little room, not knowing where to go)
-                                                                                                                                                                                 ^
-
-File "game/bb_route.rpy", line 49: expected statement.
-    (everything getting a bit louder and uncomfortable to listen to)
-                                                                    ^
-
-File "game/bb_route.rpy", line 50: expected statement.
-    (insert blurred text of smn tryna speak)
-                                            ^
-
-File "game/bb_route.rpy", line 51: expected statement.
-    (minigame to focus on their words(just quick clicking game with timelimit))
-                                                                               ^
-DPI scale factor: 1.250000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Interface start. took 0.37s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 512.78'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1724, 970) drawable=(1724, 970)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 27.37s
-Early init. took 0.00s
-Loader init. took 0.04s
-Loading error handling. took 0.02s
-Loading script. took 0.18s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.07s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
+Running init code. took 0.08s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.01s
+Reloading save slot metadata. took 0.04s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\koduk\\AppData\\Roaming/RenPy/backups\\cosocode_gamejam':
-Dump and make backups. took 0.06s
+Dump and make backups. took 0.09s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.02s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object. took 0.29s
+Creating interface object. took 0.34s
 Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
+Init translation took 0.05s
+Build styles took 0.01s
 Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.04s
+Interface start. took 0.10s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)

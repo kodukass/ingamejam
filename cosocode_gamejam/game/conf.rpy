@@ -41,6 +41,27 @@ init:
     $ dissolve = Dissolve(0.5)
     $ fastdissolve = Dissolve(0.2)
 
+image phone animated:
+            "alarm1"
+            pause 0.5
+            "alarm2"
+            pause 0.8
+            repeat
+
+screen phoneAlarm:
+
+    imagebutton:
+        focus_mask True
+        idle "alarm3"
+        hover "alarm4"
+        action Jump("next") 
+
+screen alarmSlider:
+    frame:
+        has hbox
+
+        vbar value Preference("sound volume")
+
 #sshake
 init:
 
