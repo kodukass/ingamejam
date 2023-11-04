@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/bb_route.rpy", line 106: expected 'image_name_component' not found.
-    hide 
-         ^
+File "game/bb_route.rpy", line 316: expected statement.
+    sh
+      ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Sat Nov  4 13:31:45 2023
+Sat Nov  4 16:16:12 2023
