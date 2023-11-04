@@ -33,7 +33,8 @@ label bb_route:
 label bb_next:
     hide phone animated
     stop sound
-
+    $ renpy.music.set_volume(500.00, delay=1.0, channel='music')
+    play music "audio/boyslow_calm_tired.wav"
     show bg black with Dissolve(1.0)
     play sound "audio/bedsheets.wav"  
     bb "I really don't want to go.."
@@ -50,6 +51,7 @@ label bb_next:
                                                     #(insert really dramatic low perspective of a school to make it look intimidating)
     hide cg mirror with dissolve
     show bg stairs with dissolve                        #(insert nervous side view of B)
+    play music "audio/boybeast.wav"
     bb "{i}Why did I have to be put into such a massive school? {/i}"
     bb "{i}How am I even meant to figure out where all my classes are? I don't know a single person here, so I can't even ask anyone!{/i}"
     
@@ -107,9 +109,10 @@ label bb_next:
     
     "(unlocked person: friendly classmate from 10A)"
     hide u idle with dissolve
-    scene bg class with dissolve #In class: (sits at back)
+    scene bg black with dissolve #In class: (sits at back)
     $ renpy.music.set_volume(2.0, delay=1.0, channel='sound')
     $renpy.sound.play("audio/tinitus.ogg", loop=True)
+    play music "audio/boynervous1.wav"
     #play sound "audio/tinitus.mp3": on loop #(still overwhelmed buzzing, heart beat sound and yes no focus)
     t "Karl?"
     u "Present"
@@ -160,13 +163,14 @@ label toiletpart:
     
     #(insert rapid breathing sound effect)
     show bg toilet with dissolve
+    play music "audio/boynervous2.wav"
     #(everything blur except for a bathroom sign)
     play sound "audio/speed_walk.wav"
     play sound "audio/door.wav"
     "..."
     #(fast walking sound effect, door open close)
     #(the entire place is empty. Leaning on sink, looking down)
-    show bg toilet1 with fastdissolve
+    #show bg toilet1 with fastdissolve
     #(insert un-winnable calm down minigame with the breathing or clicking or whatever)
     play sound "audio/breathing.wav" loop
     bb "{i}This is not helping, this is not working...{/i}"
@@ -174,7 +178,7 @@ label toiletpart:
     bb"{i}!!!{/i}"
     bb"{i}I need to think of something else, I'm driving myself mad!{/i}"
     bb"{i}I need a distraction...{/i}"
-    #(opens phone)
+    show cg phonetoilet with dissolve #(opens phone)
     #(messages GB)
     bb_nvl "Hey, you free?"
     #...
@@ -183,7 +187,7 @@ label toiletpart:
     #(show visually them calming down while messages scroll by on the phone)
     #(shit unblurs and they feel better)
     #(close phone. School bell rings)
-    
+    hide cg phonetoilet with dissolve
     play sound "audio/deep_breath.wav"
     bb"..."
     play sound "audio/door.wav"
@@ -194,11 +198,12 @@ label toiletpart:
     show bg black with dissolve
     #(time skip to home)
     #(sound effect of just laying down on bed. Face planting, if you will)
-    
-    show bg room with dissolve 
+    play music "audio/boynervous3.wav"
+    show bg room1 with dissolve 
     play sound "audio/bedsheets.wav"  
     bb "..."
     #(phone buzz)
+    show bg room2
     play sound "audio/RecieveText.ogg"
     #(open chat room)
 label q:
@@ -218,7 +223,7 @@ label gamebb:
     nvl_narrator "A game wont hurt. Besides, Matt always has a way to cheer me up!"
     bb_nvl "You know what, sure! Let me set up rq"
     #(insert sounds of grabbing headphones and whatnot)
-    show cg bb_headphones with dissolve
+    show bg gaming1 with dissolve
     #(BB with headphones)
     #(insert the game/the sounds of the game they play)
     $ renpy.music.set_volume(0.10, delay=1.0, channel='music')
@@ -257,11 +262,11 @@ label gamebb:
     gb_nvl "Im on my way."
     ""
     show bg black
-    hide cg bb_headphones with dissolve
+    hide bg gaming1 with dissolve
     #show bg black with dissolve
     "Few hours later..."
     #hide bg black with dissolve
-    show cg bb_headphones with dissolve
+    show bg gaming1 with dissolve
     #(mingisugune visual aid to show time pass, i.e, clock)
     
     nvl_narrator 'You hear your mom say "Laura! You going to sleep?"'

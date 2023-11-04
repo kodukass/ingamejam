@@ -8,7 +8,7 @@ label gb_route:
 
     scene bg bg_black with Dissolve(1.0)
     #play sound "audio/???"                #(Alarm goes off at 6:00) #(no minigame/pressing it once, bro just wakes up)
-    show bg gb_bed_wakeup with dissolve          #gets up
+    #show bg gb_bed_wakeup with dissolve          #gets up
     gb "{i}Right! First day! Time for me to make a memorable entrance!{/i}"
 
     play sound "audio/girlbeastcalm.wav"
@@ -23,27 +23,28 @@ label gb_route:
     gb "{i}That's more like it. Now...{/i}"
     show bg gb_doing_makeup with dissolve                #(doing makeup! Maybe show time passing visually, images of actions switching)
     #play sound "audio/??"                 #time ticking sound
-                                           #(potential eyeliner/all the makeup as minigame? Eyeliner mouse so straight lines very difficult)
+                                        #(potential eyeliner/all the makeup as minigame? Eyeliner mouse so straight lines very difficult)
     gb "{i}No one ever told me eyeliner would be this difficult! I definitely should've tried this out before today...{/i}"
-                                           #(more minigame)
+                                        #(more minigame)
     gb "{i}Ah damn it, no eye liner!{/i}"
     #play sound "audio/??"                 #(makeup wiping/water soundeffect)
 
     gb "{i}Eyeshadow and highlighter will have to do{/i}"
     #play sound "audio/??"                 #(some doing stuff sound)
-    show bg gb_makeup_result with dissolve                #(show result. Not perfect, room to improve, but its okay)
+    #show bg gb_makeup_result with dissolve                #(show result. Not perfect, room to improve, but its okay)
+    show bg bg_black with dissolve  
     gb "{i}There we go! Now...{/i}"
-    show bg gb_clock with dissolve                #(look at time)
+    #show bg gb_clock with dissolve                #(look at time)
     #play sound "audio/??" 
     gb "{i}Oh shoot! Gotta hurry{/i}"
     #play sound "audio/??"                 #(taking bag and running sound effects)
 
     scene bg_black with Dissolve(1.0)
     play sound "audio/girlbeastschool.wav"
-    show bg gb_school with dissolve                #(show school?)
+    #show bg gb_school with dissolve                #(show school)
     gb "{i}Here we go again{/i}"
     #play sound "audio/??"                 #(walking sound effect)
-    show bg gb_hallway with dissolve                #(hallway)
+    #show bg gb_hallway with dissolve                #(hallway)
     #play sound "audio/??"                 #(sound effects of people talking)
 
     show bg gb_school_happy with dissolve                #(drawing of gb happy)
@@ -58,7 +59,7 @@ label gb_route:
     rando "Everyone knows"
     rando "But could you even try to pretend you're normal?"
     rando "No?"
-                                           #(insert fake smile minigame)
+                                        #(insert fake smile minigame)
 
     menu:
         "{i}I manage to keep up a fake smile{/i}":
@@ -119,14 +120,14 @@ label gb_continue:
     #kasuta nvl narratorit internal mõtete jaoks??
     #kas neid choice asju saab teha üldse selles telefoni asjas...
     #play sound "audio/??"                 #(phone buzzes in class)
-                                           #hea oleks kui siia saaks mingi. phone image ja open animation aga lmao (opens)
+                                        #hea oleks kui siia saaks mingi. phone image ja open animation aga lmao (opens)
     bb_nvl "Hey, you free?"
     nvl_narrator "{i}Oh god, that's never good. Does she need my help right now? I'm still feeling a bit shaken…{/i}"
     nvl_narrator "{i}But…{/i}" #kas need on ka nvl mode või läheb tagasi tavalisse kasti korra, nagu ta tõstaks pead? siis võiks image ka olla
     nvl_narrator "{i}But she's my friend! Come on, I can do this.{/i}"
     gb_nvl "Yep! What's up?" #kas ma saaks need narration sõnumid nagu. ära kaotada kui ta vastab?
-                                           #(insert consoling minigame)
-                                           #(success bar on the side?)
+                                        #(insert consoling minigame)
+                                        #(success bar on the side?)
 
     bb_nvl "I'm sorry to message you like this, I just really needed a distraction"
     pause

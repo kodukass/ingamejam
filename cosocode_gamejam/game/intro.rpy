@@ -1,6 +1,6 @@
 label intro:
     # NVL characters are used for the phone texting
-
+    
     #nvl_narrator "Nighten added Eileen to the group"
     gb_nvl "Hey Bones. Did ya get there safe?"
     bb_nvl "Yeah I did. God, I HATE long bus rides"
