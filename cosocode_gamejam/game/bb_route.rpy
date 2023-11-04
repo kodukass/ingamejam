@@ -13,7 +13,7 @@ label bb_route:
     
     play sound "audio/alarm.ogg"                         #(Insert very annoying alarm beeping)
     bb "Mnghh....."
-    #hide bg_black
+    hide bg_black with Dissolve(1.0)
     # seda black->phone alarm transitioni smoothimaks?
     
    
@@ -25,7 +25,8 @@ label bb_route:
     call screen phoneAlarmBlinking
     hide bg black with Dissolve(1.0)
     #seda on vist ainult ühe korra vaja nii et ma teen praegu siin lic?
-    show alarm_background with phone_appear
+    #show alarm_background with phone_appear
+
 
     #--------------------------------------
     
