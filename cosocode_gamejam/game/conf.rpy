@@ -18,6 +18,7 @@ define gb = Character("MC_Name", color="#8e5e9e", image="gb")
 define choose_character="choose_character.png"
 define bg_1sept="bg_1sept.png"
 define bg_black="bg_black.png"
+define alarm_background="alarm_background.png"
 
 define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.3)
@@ -41,6 +42,7 @@ init:
     $ dissolve = Dissolve(0.5)
     $ fastdissolve = Dissolve(0.2)
 
+# bb route phone blinking
 image phone animated:
             "alarm1"
             pause 0.5
@@ -48,14 +50,21 @@ image phone animated:
             pause 0.8
             repeat
 
-screen phoneAlarm:
-
+# bb route phone clickable highlight
+screen phoneAlarmBlinking:
     imagebutton:
         focus_mask True
         idle "alarm3"
         hover "alarm4"
-        action Jump("next") 
+        action Jump("bb_next")
+        #Show(phoneAlarmSlider)
 
+#screen phoneAlarmSlider:
+    #hide phone animated
+    #show alarm_background with phone_appear
+
+
+# bb route phone alarm slider
 screen alarmSlider:
     frame:
         has hbox

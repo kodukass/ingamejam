@@ -13,16 +13,19 @@ label bb_route:
     
     #play sound "audio/???"                         #(Insert very annoying alarm beeping)
     bb "Mnghh....."
-    
-    hide bg_black with Dissolve(1.0)
+    hide bg_black
+    # seda black->phone alarm transitioni smoothimaks?
     #--------------------------------------
 
     show phone animated
-    call screen phoneAlarm
+    call screen phoneAlarmBlinking
+    #seda on vist ainult ühe korra vaja nii et ma teen praegu siin lic?
+    show alarm_background with phone_appear
+
 
     #--------------------------------------
     
-label next:
+label bb_next:
     hide phone animated
     
     show bg_black with Dissolve(1.0)
@@ -70,7 +73,7 @@ label next:
 
 # minigame here to shut off alarm?
 # smth with pulling the thingy to the side?
-label one:
+# label one:
     nvl_narrator "Nighten added Eileen to the group"
     n_nvl e2m2_b "Hey! Welcome to the demo Eileen!"
     e_nvl "who's this?"
