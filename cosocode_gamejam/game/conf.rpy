@@ -14,10 +14,21 @@ define gb_nvl = Character("mc", kind=nvl, color="#683e95", image="gb", callback=
 
 define bb = Character("BB", color="#5f953e", image="bb")
 define gb = Character("MC_Name", color="#8e5e9e", image="gb")
+define u = Character("???", color="#5e7b9e", image="u")
+define t = Character("Teacher", color="#b5b5b5", image="t")
 
-define choose_character="choose_character.png"
-define bg_1sept="bg_1sept.png"
-define bg_black="bg_black.png"
+define choose_character=Transform("choose_character.png")
+image bg sept=Transform("bg_1sept.png")
+image bg black=Transform("bg_black.png")
+image bg hallway=Transform("bg_hallway.png")
+image bg stairs=Transform("bg_stairs.png")
+image bg room=Transform("bg_room.jpg")
+image cg people=Transform("cg_people.png")
+
+image u smile=Transform("u_smile.png")
+image u idle=Transform("u_idle.png")
+image u shadow=Transform("u_shadow.png")
+#define bg_closehallway=Transform("images/???", zoom=0.33)
 define alarm_background="alarm_background.png"
 
 define config.adv_nvl_transition = None
@@ -40,10 +51,11 @@ init:
     $ fade = Fade(0.7, 0, 0.7)
     # # Dissolves between old and new scenes.
     $ dissolve = Dissolve(0.5)
-    $ fastdissolve = Dissolve(0.2)
+    $ fastdissolve = Dissolve(0.3)
 
 # bb route phone blinking
 image phone animated:
+            
             "alarm1"
             pause 0.5
             "alarm2"
@@ -71,6 +83,12 @@ screen alarmSlider:
 
         vbar value Preference("sound volume")
 
+image light_animated:
+            "alarm1"
+            pause 0.5
+            "alarm2"
+            pause 0.8
+            repeat
 #sshake
 init:
 
@@ -132,8 +150,8 @@ init:
 screen choose_character_buttons():
     imagemap:
         ground choose_character
-        hotspot(1122, 307, 566, 545) action Jump ("gb_route") hovered ShowTransient("the_img", img="choose_character_hovergb.png") unhovered Hide("the_img")
-        hotspot(246, 295, 552, 544) action Jump ("bb_route") hovered ShowTransient("the_img", img="choose_character_hoverbb.png") unhovered Hide("the_img")
+        hotspot(1122, 307, 566, 545) action Jump ("bb_route") hovered ShowTransient("the_img", img="choose_character_hovergb.png") unhovered Hide("the_img")
+        hotspot(246, 295, 552, 544) action Jump ("gb_route") hovered ShowTransient("the_img", img="choose_character_hoverbb.png") unhovered Hide("the_img")
 
 screen the_img(img):
     add img

@@ -6,147 +6,140 @@ $ xnum = renpy.random.randint(260,677)
 
 label bb_route:
     scene placeholder_bg
-    show bg_1sept with Dissolve(1.0)
+    show bg sept with Dissolve(1.0)
     pause
-    show bg_black with Dissolve(1.0)
-    hide bg_1sept
+    show bg black with Dissolve(1.0)
+    #hide bg sept
     
-    #play sound "audio/???"                         #(Insert very annoying alarm beeping)
+    play sound "audio/alarm.ogg"                         #(Insert very annoying alarm beeping)
     bb "Mnghh....."
-    hide bg_black
+    #hide bg_black
     # seda black->phone alarm transitioni smoothimaks?
+    
+   
     #--------------------------------------
-
+    
+    # minigame here to shut off alarm?
+# smth with pulling the thingy to the side?
     show phone animated
     call screen phoneAlarmBlinking
+    hide bg black with Dissolve(1.0)
     #seda on vist ainult ühe korra vaja nii et ma teen praegu siin lic?
     show alarm_background with phone_appear
-
 
     #--------------------------------------
     
 label bb_next:
     hide phone animated
-    
-    show bg_black with Dissolve(1.0)
-    hide bg_black with Dissolve(1.0)
+    stop sound
+
+    show bg black with Dissolve(1.0)
+    play sound "audio/bedsheets.wav"  
     bb "I really don't want to go.."
-    #play sound "audio/???"                         #(sheets ruffling sound effect)
+                            #(sheets ruffling sound effect)
     
-    #show ??? with dissolve                         #(insert room view and bro rubbing his eyes)
-    bb "Right...new school...new...me?" 
+    show bg room with dissolve                        #(insert room view and bro rubbing his eyes)
+    #hide bg black with Dissolve(1.0)
+    bb "{i}Right...new school...new...me?{i}" 
     bb "As if."
     
-    #show ??? with dissolve                         #(look in mirror)
+    show cg mirror with dissolve                      #(look in mirror)
+    bb "..."
     bb "Let's just get this over with."
-
-    #show ??? with dissolve                         #(insert really dramatic low perspective of a school to make it look intimidating)
-    #show ??? with dissolve                         #(insert nervous side view of B)
-    bb "Why did I have to be put into such a massive school? "
-    bb "How am I even meant to figure out where all my classes are? I don't know a single person here, so I can't even ask anyone!"
+                                                    #(insert really dramatic low perspective of a school to make it look intimidating)
+    hide cg mirror with dissolve
+    show bg stairs with dissolve                        #(insert nervous side view of B)
+    bb "{i}Why did I have to be put into such a massive school? {/i}"
+    bb "{i}How am I even meant to figure out where all my classes are? I don't know a single person here, so I can't even ask anyone!{/i}"
     
     #---------------------------------
     #(Overlapping text to show distress)
     
-    #text ("What if I walk into the wrong classroom and don't notice?")
-    #“ They'll all think I'm an idiot.”
-    #“ I'll look ridiculous!”
-    #“ What if they all start hating me?”
-    #“ It's only the first day, I can't make a fool of myself immediately!! “
+    bb "{i}What if I walk into the wrong classroom and don't notice?{/i}"
+    bb"{i}They'll all think I'm an idiot.{/i}"
+    bb"{i}I'll look ridiculous!{/i}"
+    bb"{i}What if they all start hating me?{/i}"
+    bb"{i}It's only the first day, I can't make a fool of myself immediately!!{/i}"
     #-----------------------------------
 
-    bb "Come on, Laura, get ahold of yourself!!"
-    #show ??? with fastdissolve                     #(insert slightly startling transition and scary B colour scheme hallway)
-    bb "What was the room I was told to go to?" 
-    bb "100...106? Or was it 108…"
-    bb "How are these classrooms even numbered?"
-    #“ There can't be over a hundred classrooms in this building...can there?”
-    #“ How many students is that? “
-    #“Hundreds...hundreds and hundreds of students...any one of them could see me, and I wouldn't even know...“
-    #(mingi asi, nt blur effect, näitab kuidas ta end tunneb.Visual representation of overwhelming things. Loud noises, lights, many people, little room, not knowing where to go)
+    bb "{i}Come on, Laura, get ahold of yourself!!{/i}"
+    show bg hallway with fastdissolve
+    play sound "audio/crowd1.ogg"
+    #(insert slightly startling transition and scary B colour scheme hallway)
+    bb "{i}What was the room I was told to go to?{/i}" 
+    bb "{i}100...106? Or was it 108…{/i}"
+    bb "{i}How are these classrooms even numbered?{/i}"
+    bb "{i}There can't be over a hundred classrooms in this building{/i}"
+    bb "{i}...can there?{/i}"
+    bb "{i}How many students is that?{/i}"
+    $ renpy.music.set_volume(5.00, delay=1.0, channel='sound')
+    bb "{i}Hundreds...hundreds and hundreds of students...{/i}"
+    
+    show bg hallway with dissolve:
+        blur 16                                        #(mingi asi, nt blur effect, näitab kuidas ta end tunneb.Visual         
+        #show light_animated                            #representation of overwhelming things. lights,              #Loud noises, 
+        #show people with (edasi tagasi animatsioon)    #many people, 
+        #with zoom=0.33 (äkki?või variation)            #little room, not knowing where to go)
+
+    bb "{i}any one of them could see me, and I wouldn't even know...{/i}"
+
     #(everything getting a bit louder and uncomfortable to listen to)
     #(insert blurred text of smn tryna speak)
+
+    #hide light_animated
+    $ renpy.music.set_volume(0.1, delay=1.0, channel='sound')
+    #stop sound fadeout 1.0
+    #-------------------------------------
+
     #(minigame to focus on their words(just quick clicking game with timelimit))
 
-
+    #-------------------------------------
+    show u shadow with fastdissolve
+    u "Hello? Are you new here?"
+    bb "Eugh...yes, yes I am"
+    show u idle with fastdissolve
+    u "Oh! So am I! What's your class?"
+    bb "10A... or so I've been told, at least"
+    u @ smile"Well, thank my lucky stars, same goes for me! "
+    u "Do you want to go find the class together perhaps? I can't seem to navigate at all!"
+    bb "...sure. Yes, that would be...very nice."
     
+    "(unlocked person: friendly classmate from 10A)"
+    hide u idle with dissolve
+    scene bg class with dissolve #In class: (sits at back)
+    $ renpy.music.set_volume(2.0, delay=1.0, channel='sound')
+    $renpy.sound.play("audio/tinitus.ogg", loop=True)
+    #play sound "audio/tinitus.mp3": on loop #(still overwhelmed buzzing, heart beat sound and yes no focus)
+    t "Karl?"
+    u "Present"
+    t "Hendrik?"
+    u "Present"
+    t "Maria?"
+    u "Present"
+    t "Laura?"
+    bb "{i}...{/i}"
+    $ renpy.music.set_volume(0.00, delay=1.0, channel='sound')
+    t "Laura?"
+    t "Do we have Laura in here?"
+    bb "... here."
+    #(raise hand button)
+    t "Ah, there you are!"
+    $ renpy.music.set_volume(1.00, delay=1.0, channel='sound')
+    #play sound "audio/tinitus.mp3" on loop #(back to unfocused buzz)
+    bb "{i}God I feel sick. I might actually fall over at this rate.{/i}"
+    bb "{i} Why am I so stressed? I found the right class!{/i}"
+    bb "{i}I did react a bit slow to her calling my name...but I reacted! {/i}"
 
-# minigame here to shut off alarm?
-# smth with pulling the thingy to the side?
-# label one:
-    nvl_narrator "Nighten added Eileen to the group"
-    n_nvl e2m2_b "Hey! Welcome to the demo Eileen!"
-    e_nvl "who's this?"
-    n_nvl e2m1_b "haha, silly you"
-    n_nvl e1m2_b "We talked about showing off the phone the other day, remember?"
-    e_nvl "it's today? {image=emoji/fear.png}"
-    e_nvl "oops sorry night', I forgot {image=emoji/sweat.png}"
-    n_nvl "No problem, you must be quite busy!"
-    n_nvl e2m2_b "congrat on showing the emoji tho {image=emoji/clap.png}"
-    e_nvl "Nothing magical, it's just a {a=https://www.renpy.org/doc/html/text.html#text-tag-image}image tag{/a} :)"
-    n_nvl e1m2 "But since we use regular renpy, we can use the same principle to send pictures!"
-    e_nvl "Right! Let me take a selfie {image=emoji/camera.png}"
-    show nighten e1m2_b
-    e_nvl "{image=EileenSelfieSmall.png}"
-    n_nvl e2m1_b "awww, you look fantastic!"
-    show nighten e2m2_b
-    e_nvl "A bit low res but hey, the pic has to fit the screen somehow"
-    
-    n_nvl "Thank you Eileen for doing this demo with me!"
-    e_nvl "no problem, I hope people will make good use of it!"
-    e_nvl "byyee {image=emoji/wave.png}"
+    bb "{i}At least...come on, be positive! Mother is always nagging you to be more optimistic!{/i} "
+    bb "{i}Come on come on...{/i}"
+    bb "{i}I hope no one can hear my breathing.{/i}"
+    bb "{i}I'm being loud, aren't I?{/i}"
+    bb "{i}Come on, come on...They all probably think I'm disgusting.{/i}"
+    bb "{i}I'm sweating, what is wrong with my body!{/i}"
+    #play sound "audio/kell.ogg" #(clock ticks 1 minute)
 
+    bb "{i}How long are these classes anyways?{/i}"
 
-    show nighten:
-        ease 0.5 xalign 0.5 
-
-    n e1m2 "That's it for the demo!"
-    n normal e1m2 "Do you have any question?"
-
-    jump question
-
-label question:
-    menu:
-        "What do you want to know?"
-        "How is this phone working?":
-            n e2m2 "To put it simply, it's just another style for the NVL mode."
-            n e2m1 "Yep, it's not much more complicated than that!"
-            n e1m1 "The main thing was to make it look like a phone, with a scrollable feed and the correct placement for the text."
-            n e1m2 "Knowing that, you can probably build your own phone screen; but mine can still be used as a base if needed!"
-            jump question
+    "end for now"
 
 
-        "How to add it to my {i}*awesome*{/i} project?":
-            n e1m2 "First, add PhoneTexting.rpy to your project directory. Don't forget to edit MC_Name to your main character name!"
-            n e2m2 "Then you'll have to edit the nvl screen in screen.rpy, or else it's not gonna work!"
-            n e1m2 "In gui.rpy, change gui.nvl_list_length to None, so that messages don't disapear."
-            n e1m1 "And you now just have to create nvl characters and made them speak!"
-            n e1m2 "If you want to use the regular NVL screen, change the nvl_mode variable to \"classic\", and back to \"phone\" if you want to use it again!"
-            n e2m2 "Of course check the more detailed instruction on the project page, but that's all there is to it! You should have something somewhat functionnal at this point."
-            jump question
-
-
-        "Who made this?":
-            n e1m1 "The code is created by me, Nighten!"
-            n e1m2 "I also drew my sprite and the phone UI, using Krita, Rebelle 3 and Inkscape."
-            n "All the source are available in the folder and on {a=https://github.com/NightenDushi}github{/a}, feel free to use it in your project."
-            n e2m2 "Credits would be appreciated, but not mandatory!"
-            n e1m2 "The background is created by our dear Uncle Mugen! You can find more of his work on {a=https://lemmasoft.renai.us/forums/viewtopic.php?t=17302}LemmaSoft{/a}!"
-            jump question
-        
-        "Why {i}another{/i} phone/messaging system?":
-            n e2m2 "Well, mostly because I found the other one available way too complicated, and not really friendly to use."
-            n e1m1 "I wanted a system that feels like renpy, so that you can understand it and build on it."
-            n e1m2 "And I think more option is great for the community in general!"
-            n e2m1 "But I don't think this system is perfect, far from it!"
-            jump question
-            
-        "Nothing, have a good day!":
-            jump end
-
-label end:
-    n e2m2 "Aww, thank you! Most people just close the game without saying goodbye, so I appreciate it a lot!"
-    n e1m2 "If you still have some questions, don't hesitate to message me on Discord {i}(Nighten#3081){/i}!"
-    n e1m1 "And if you want further help, you can also hire me as a programmer! {a=https://lemmasoft.renai.us/forums/viewtopic.php?f=66&t=61647}All the details are here{/a}."
-    n e2m1 "Take care! I wish you good things in life!"
-    $ renpy.quit()
