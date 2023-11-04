@@ -12,8 +12,8 @@ define gb_nvl = Character("mc", kind=nvl, color="#683e95", image="gb", callback=
 
 #misc
 
-define bb = Character("BB", color="#5f953e", image="bb")
-define gb = Character("MC_Name", color="#8e5e9e", image="gb")
+define bb = Character("BB", color="#9338aa", image="bb")
+define gb = Character("MC_Name", color="#cfa0df", image="gb")
 define u = Character("???", color="#5e7b9e", image="u")
 define t = Character("Teacher", color="#b5b5b5", image="t")
 define rando = Character("?", color="#d1f024")
@@ -21,14 +21,16 @@ define rando = Character("?", color="#d1f024")
 define choose_character=Transform("choose_character.png")
 image bg sept=Transform("bg_1sept.png")
 image bg black=Transform("bg_black.png")
-image bg hallway=Transform("bg_hallway.png")
-image bg stairs=Transform("bg_stairs.png")
-image bg room=Transform("bg_room.jpg")
-image cg people=Transform("cg_people.png")
+image bg hallway=Transform("images/bb/bg_hallway.png")
+image bg hallway1=Transform("images/bb/bg_hallway1.png")
+image bg stairs=Transform("images/bb/bg_stairs.png")
+image bg room=Transform("images/bb/bg_room.jpg")
+image cg people=Transform("images/bb/cg_people.png")
+image cg toilet=Transform("images/bb/cg_toilet.png")
 
-image u smile=Transform("u_smile.png")
-image u idle=Transform("u_idle.png")
-image u shadow=Transform("u_shadow.png")
+image u smile=Transform("images/bb/u_smile.png")
+image u idle=Transform("images/bb/u_idle.png")
+image u shadow=Transform("images/bb/u_shadow.png")
 #define bg_closehallway=Transform("images/???", zoom=0.33)
 
 image bg alarm_background="alarm_background.png"

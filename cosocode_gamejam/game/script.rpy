@@ -11,3 +11,7 @@ label start:
             jump bb_route
         "test":
             jump test
+        "q":
+            jump q
+        "toiletpart":
+            jump toiletpart

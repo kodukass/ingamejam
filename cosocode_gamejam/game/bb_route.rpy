@@ -137,9 +137,203 @@ label bb_next:
     bb "{i}I'm being loud, aren't I?{/i}"
     bb "{i}Come on, come on...They all probably think I'm disgusting.{/i}"
     bb "{i}I'm sweating, what is wrong with my body!{/i}"
-    #play sound "audio/kell.ogg" #(clock ticks 1 minute)
+    play sound "audio/clock.wav" #(clock ticks 1 minute)
 
     bb "{i}How long are these classes anyways?{/i}"
+    bb " {i}When do any of my classes end?{/i}"
+    bb" {i}I don't want to be here…{/i}"
+    bb" {i}I can't handle this right now.{/i}"
+    bb" {i}I need to get out.{/i}"
+    bb" {i}I need to just…get out and calm myself.{/i}"
+    bb"..."
+    bb" {i}I don't want to speak up.{/i}"
+    bb" {i}I don't want to bring more attention to myself.{/i}"
+    bb"{i}...come on, I can do this. I need to… get the courage and just bite the bullet{/i}"
+    #(maybe fast click to motivate them to speak up)
+    bb "...Miss?"
+    t "Yes?"
+label toiletpart:
+    bb "I'm really sorry, but, may I use the restroom?"
+    t "Oh, uh..sure! It's the first day, so you won't fall behind!"
+    #(leaves room)
+    play sound "audio/door.wav" #door sound effect)
+    
+    #(insert rapid breathing sound effect)
+    show bg toilet with dissolve
+    #(everything blur except for a bathroom sign)
+    play sound "audio/speed_walk.wav"
+    play sound "audio/door.wav"
+    "..."
+    #(fast walking sound effect, door open close)
+    #(the entire place is empty. Leaning on sink, looking down)
+    show bg toilet1 with fastdissolve
+    #(insert un-winnable calm down minigame with the breathing or clicking or whatever)
+    play sound "audio/breathing.wav" loop
+    bb "{i}This is not helping, this is not working...{/i}"
+    bb"{i}Its not working!!{/i}"
+    bb"{i}!!!{/i}"
+    bb"{i}I need to think of something else, I'm driving myself mad!{/i}"
+    bb"{i}I need a distraction...{/i}"
+    #(opens phone)
+    #(messages GB)
+    bb_nvl "Hey, you free?"
+    #...
+    gb_nvl "Yep! What's up?"
+    ""
+    #(show visually them calming down while messages scroll by on the phone)
+    #(shit unblurs and they feel better)
+    #(close phone. School bell rings)
+    
+    play sound "audio/deep_breath.wav"
+    bb"..."
+    play sound "audio/door.wav"
+    #(Deep breath sound effect)
+    #(door open sound effect)
+    show bg hallway1 with dissolve
+    bb "{i}Let's just go home...{/i}"
+    show bg black with dissolve
+    #(time skip to home)
+    #(sound effect of just laying down on bed. Face planting, if you will)
+    
+    show bg room with dissolve 
+    play sound "audio/bedsheets.wav"  
+    bb "..."
+    #(phone buzz)
+    play sound "audio/RecieveText.ogg"
+    #(open chat room)
+label q:
+    gb_nvl "Hey! You still down to play? I know you got bummed out at school, sooo, it could be fun!"
+    bb_nvl "Hmmm..."
+
+
+    nvl_narrator "{outlinecolor=#386838}I still feel a bit...off from school. What if he can tell through the call? I don't want to bring down the mood...But a game sounds fun...{/outlinecolor}"
+    
+    menu:
+        "Play the game":
+            jump gamebb
+        "Don't play":
+            jump nogame
+
+label gamebb:
+    nvl_narrator "A game wont hurt. Besides, Matt always has a way to cheer me up!"
+    bb_nvl "You know what, sure! Let me set up rq"
+    #(insert sounds of grabbing headphones and whatnot)
+    show cg bb_headphones with dissolve
+    #(BB with headphones)
+    #(insert the game/the sounds of the game they play)
+    $ renpy.music.set_volume(0.10, delay=1.0, channel='music')
+    play music "audio/keyboard.wav" loop
+
+    bb_nvl "Soo, how was your first day?"
+    gb_nvl "It was good! I'd ask about yours, but.."
+    bb_nvl "Yeah. We already had that conversation. Thanks again by the way, the distraction really helped"
+    gb_nvl "Any time!"
+    bb_nvl "Mmh… well anyways, care to help me clear out this field?"
+    #(game sounds)
+    gb_nvl "…You know what's one thing I hate about school?"
+    bb_nvl 'What, you? Mr "Straight-A-student"?'
+    gb_nvl "Oh shut up! I'm allowed to…take this stuff seriously."
+    bb_nvl "I'm just teasing."
+    #…
+    bb_nvl "Well…? What is it?"
+    gb_nvl "Oh, right. It's having to shave each morning. I have a constant razor burn! If my chin were to become sentient, I would probably get strangled in my sleep."
+    bb_nvl "That's not the school's fault, though. That's your own choice!"
+    bb_nvl "No one is forcing you"
+    gb_nvl "Technically, no, but I despise how I look with stubble! At least during summer, people don't see me every day!"
+    #…
+    gb_nvl "The worst part of growing older was me getting a beard. Curse my father and his immaculate mustache."
+    bb_nvl "I thought beards were like…a point of pride for you guys"
+    gb_nvl "I mean, guess it can be"
+    gb_nvl " They look great on some folks!"
+
+    gb_nvl "I just don't think it fits my face."
+    bb_nvl "I suppose. The clean look does suit you quite well."
+    gb_nvl "Thanks"
+    #…
+    bb_nvl "I think having a beard could be cool, though."
+    gb_nvl "You're weird, Laura! I can't imagine either of us with a beard!"
+    bb_nvl "That sounds like your issue to deal with."
+    bb_nvl "Now, you gonna help me or nah?"
+    gb_nvl "Im on my way."
+    ""
+    show bg black
+    hide cg bb_headphones with dissolve
+    #show bg black with dissolve
+    "Few hours later..."
+    #hide bg black with dissolve
+    show cg bb_headphones with dissolve
+    #(mingisugune visual aid to show time pass, i.e, clock)
+    
+    nvl_narrator 'You hear your mom say "Laura! You going to sleep?"'
+    nvl_narrator '"Yes mom!"'
+    bb_nvl "Sorry Matt, I gotta go"
+    gb_nvl "Awe man! Sure, talk to you tomorrow, aight?"
+    bb_nvl "Yeah yeah"
+    ""
+    #(call close)
+    stop music
+    show cg standup with dissolve
+    bb"Hmm..."
+    #(stand up)
+    show cg mirror with dissolve
+    bb"..."
+    #(go to mirror)
+    show cg mirrorbeard with dissolve
+    bb"..."
+    #(picture's self with beard)
+    show cg mirror with dissolve
+    bb "Haah..."
+    bb "Guess I should go to bed."
+    #(Mirror scene with zooming in and comments abt body)
+    #(sleep time)
+    show bg black with dissolve
+    return
+
+label nogame:
+     
+    bb_nvl "I'm sorry, I'm not really feeling up for it."
+    gb_nvl "That's fine! Another time?"
+    bb_nvl "Yeah, sure"
+    ""
+    #(closes phone, stares at ceiling)
+
+    bb "It's better like this. I won't stress him out or cause him any more issues...yeah...Better.."
+    #(face go sad)
+    show cg sad with dissolve 
+    bb "Haah..."
+    #(cover face)
+    show cg cover_face with dissolve
+    bb "God, I'm pathetic..."
+    #(grabs phone)
+    show cg scrolling with dissolve
+    pause
+    #(doom scrolling)
+    #(start filling up screen slowly yk)
+    #(show time flying by)
+    show bg black
+    hide cg scrolling with dissolve
+    #show bg black with dissolve
+    "Few hours later..."
+    show cg scrolling with dissolve
+    #hide bg black with dissolve
+    u "Laura! You going to sleep?"
+    bb "Yeah, yeah mom!"
+    #(sigh)
+    #(stands up)
+    #(look in mirror)
+    #(highlighted insecurities or smth)
+    #(can zoom in)
+    #(hiirega highlighted??)
+    #(end scene with sleep)
+    show cg standup with dissolve
+    bb"Hmm..."
+    #(stand up)
+    show cg mirror with dissolve
+    #(go to mirror)
+    bb "Haah..."
+    bb "Guess I should go to bed..."
+    show bg black with dissolve
+    return
 
     "end for now"
 

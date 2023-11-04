@@ -1,21 +1,29 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('bg_room.png') at 0x00000000050bcee0>:
-  File "game/bb_route.rpy", line 40, in script
-    show bg room with dissolve                         #(insert room view and bro rubbing his eyes)
-OSError: Couldn't find file 'bg_room.png'.
+While processing text tag {outlinecolor} in "{outlinecolor=#000000}I still feel a bit...off from school. What if he can tell through the call? I don't want to bring down the mood...But a game sounds fun...{outlinecolor}".:
+  File "renpy/common/00keymap.rpy", line 485, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 485, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 507, in _execute_python_hide
+    ui.interact(suppress_overlay=True, suppress_underlay=True)
+Exception: empty value supplied for tag 'outlinecolor'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/bb_route.rpy", line 40, in script
-    show bg room with dissolve                         #(insert room view and bro rubbing his eyes)
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\ast.py", line 1678, in execute
-    renpy.exports.with_statement(trans, paired=paired)
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\exports.py", line 1757, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\core.py", line 2975, in do_with
-    return self.interact(trans_pause=True,
+  File "renpy/common/00keymap.rpy", line 485, in script
+    python hide:
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 485, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 507, in _execute_python_hide
+    ui.interact(suppress_overlay=True, suppress_underlay=True)
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\core.py", line 3579, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
   File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\core.py", line 4172, in interact_core
@@ -28,12 +36,16 @@ Full traceback:
     surf = render(child, width, height, cst, cat)
   File "render.pyx", line 170, in renpy.display.render.render
   File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\transition.py", line 379, in render
-    top = render(self.new_widget, width, height, st, at)
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\layout.py", line 886, in render
+    surf = render(child, width, height, cst, cat)
   File "render.pyx", line 170, in renpy.display.render.render
   File "render.pyx", line 266, in renpy.display.render.render
   File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\layout.py", line 886, in render
     surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\screen.py", line 731, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
   File "render.pyx", line 170, in renpy.display.render.render
   File "render.pyx", line 266, in renpy.display.render.render
   File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\layout.py", line 886, in render
@@ -45,10 +57,16 @@ Full traceback:
   File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
   File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
   File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\image.py", line 513, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\image.py", line 316, in wrap_render
-    rend = render(child, w, h, st, at)
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\layout.py", line 1336, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\viewport.py", line 273, in render
+    surf = renpy.display.render.render(self.child, child_width, child_height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\layout.py", line 1107, in render
+    surf = render(d, width - x, rh, cst, cat)
   File "render.pyx", line 170, in renpy.display.render.render
   File "render.pyx", line 266, in renpy.display.render.render
   File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\transform.py", line 909, in render
@@ -56,19 +74,15 @@ Full traceback:
   File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
   File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
   File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\im.py", line 676, in render
-    return cache.get(self, render=True)
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\im.py", line 330, in get
-    surf = image.load()
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\im.py", line 803, in load
-    raise e
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\display\im.py", line 757, in load
-    filelike = renpy.loader.load(self.filename, directory="images")
-  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\loader.py", line 833, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'bg_room.png'.
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\text\text.py", line 2171, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\text\text.py", line 629, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "C:\Users\koduk\Downloads\renpy-7.4.8-sdk\renpy\text\text.py", line 1211, in segment
+    raise Exception("empty value supplied for tag %r" % tag)
+Exception: empty value supplied for tag 'outlinecolor'
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.1.1.23060707
 cosocode_gamejam 1.0
-Sat Nov  4 13:37:00 2023
+Sat Nov  4 15:41:40 2023
