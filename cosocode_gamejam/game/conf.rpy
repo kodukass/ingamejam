@@ -14,11 +14,28 @@ define gb_nvl = Character("mc", kind=nvl, color="#683e95", image="gb", callback=
 
 define bb = Character("BB", color="#5f953e", image="bb")
 define gb = Character("MC_Name", color="#8e5e9e", image="gb")
+define rando = Character("?", color="#d1f024")
 
 define choose_character="choose_character.png"
-define bg_1sept="bg_1sept.png"
-define bg_black="bg_black.png"
-define alarm_background="alarm_background.png"
+image bg bg_1sept="bg_1sept.png"
+image bg bg_black="bg_black.png"
+image bg alarm_background="alarm_background.png"
+
+image bg gb_doing_makeup="gb/applyup.png"
+image bg gb_school_pointing="gb/gayshame.png"
+image bg gb_school_happy="gb/idle talking gb and friend.png"
+image bg gb_smile_fail="gb/losesmile.png"
+image bg gb_removing_makeup="gb/makeremove.png"
+image bg gb_mirror_mean="gb/mirrorgmeh.png"
+image bg gb_mirror_okay="gb/mirrorgsmile.png"
+image bg gb_mirror_face="gb/toshave.png"
+image bg gb_clean_shaven="gb/shaved.png"
+image bg gb_smile_success="gb/winsmile.png"
+
+image gb_happy_click="gb/happy click.png"
+image gb_bad_click="gb/bad click.png"
+image gb_neutral_click="gb/neutral click.png"
+image gb_selfie="gb/selfietosend.png"
 
 define config.adv_nvl_transition = None
 define config.nvl_adv_transition = Dissolve(0.3)
@@ -57,11 +74,12 @@ screen phoneAlarmBlinking:
         idle "alarm3"
         hover "alarm4"
         action Jump("bb_next")
+        #action Jump("phoneAlarmSlider")
         #Show(phoneAlarmSlider)
 
 #screen phoneAlarmSlider:
     #hide phone animated
-    #show alarm_background with phone_appear
+    #image alarm_background with phone_appear
 
 
 # bb route phone alarm slider

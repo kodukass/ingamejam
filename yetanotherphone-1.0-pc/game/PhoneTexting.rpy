@@ -55,19 +55,71 @@ transform message_narrator:
 screen PhoneDialogue(dialogue, items=None):
 
     style_prefix "phoneFrame"
-    frame at phone_transform(phone_position_x, phone_position_y):
-        if len(dialogue) == 1:
-            at phone_appear(phone_position_x, phone_position_y)
-        viewport:
-            draggable True
-            mousewheel True
+
+#lisasin siia uuest koodist tüki menüüde jaoks? ei tööta üksinda tho..
+    vbox:
+        spacing 0
+        # Messenger screen
+        frame:
+            # ysize 0.85
+            if len(items)>=2:
+                ysize 1632-(len(items)-2)*(120+10)-20
+            else:
+                ymaximum 1632
+            viewport:
+                draggable True
+                mousewheel True
+                # cols 1
+                yinitial 1.0
+                # scrollbars "vertical"
+                vbox:
+                    xalign 0.5
+                    null height 20
+                    use nvl_phonetext(dialogue,items)
+                    null height 100
+        # Button to progress
+        if len(items)==0: #If we don't have a menu
+            button:
+                padding (0,0)
+                add Solid("#ffda4a")
+                add Transform("continue_btn.png", align=(0.5,0.5))
+                action RollForward()
+        else:
+            # Phone Menu Choice
+            frame:
+                background Solid("#ffda4a")
+                foreground None
+
+                vbox:
+                    yalign 0.5
+                    for i in items: #For each choices...
+                        button:
+                            action i.action
+                            xalign 0.5
+                            frame:
+                                background Solid("#f1f6fe")
+                                foreground None
+                                xysize (1000,120)
+
+                                text i.caption:
+                                    align (0.5,0.5)
+                                    text_align 0.5
+                                    size 60
+                            # style "nvl_button"
+                            
+#    frame at phone_transform(phone_position_x, phone_position_y):
+#        if len(dialogue) == 1:
+#            at phone_appear(phone_position_x, phone_position_y)
+#        viewport:
+#            draggable True
+#            mousewheel True
             # cols 1
-            yinitial 1.0
+#            yinitial 1.0
             # scrollbars "vertical"
-            vbox:
-                null height 20
-                use nvl_phonetext(dialogue)
-                null height 100
+#            vbox:
+#                null height 20
+#                use nvl_phonetext(dialogue)
+#                null height 100
 
 
 screen nvl_phonetext(dialogue):

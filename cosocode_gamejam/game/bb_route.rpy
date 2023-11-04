@@ -13,14 +13,14 @@ label bb_route:
     
     #play sound "audio/???"                         #(Insert very annoying alarm beeping)
     bb "Mnghh....."
-    hide bg_black
+    hide bg_black with Dissolve(1.0)
     # seda black->phone alarm transitioni smoothimaks?
     #--------------------------------------
 
     show phone animated
     call screen phoneAlarmBlinking
     #seda on vist ainult ühe korra vaja nii et ma teen praegu siin lic?
-    show alarm_background with phone_appear
+    #show alarm_background with phone_appear
 
 
     #--------------------------------------
@@ -49,10 +49,10 @@ label bb_next:
     #(Overlapping text to show distress)
     
     #text ("What if I walk into the wrong classroom and don't notice?")
-    #“ They'll all think I'm an idiot.”
-    #“ I'll look ridiculous!”
-    #“ What if they all start hating me?”
-    #“ It's only the first day, I can't make a fool of myself immediately!! “
+    #" They'll all think I'm an idiot."
+    #" I'll look ridiculous!"
+    #" What if they all start hating me?"
+    #" It's only the first day, I can't make a fool of myself immediately!! "
     #-----------------------------------
 
     bb "Come on, Laura, get ahold of yourself!!"
@@ -60,9 +60,9 @@ label bb_next:
     bb "What was the room I was told to go to?" 
     bb "100...106? Or was it 108…"
     bb "How are these classrooms even numbered?"
-    #“ There can't be over a hundred classrooms in this building...can there?”
-    #“ How many students is that? “
-    #“Hundreds...hundreds and hundreds of students...any one of them could see me, and I wouldn't even know...“
+    #" There can't be over a hundred classrooms in this building...can there?"
+    #" How many students is that? "
+    #"Hundreds...hundreds and hundreds of students...any one of them could see me, and I wouldn't even know..."
     #(mingi asi, nt blur effect, näitab kuidas ta end tunneb.Visual representation of overwhelming things. Loud noises, lights, many people, little room, not knowing where to go)
     #(everything getting a bit louder and uncomfortable to listen to)
     #(insert blurred text of smn tryna speak)
