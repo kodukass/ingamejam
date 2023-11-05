@@ -16,6 +16,7 @@ define bb = Character("BB", color="#9338aa", image="bb")
 define gb = Character("MC_Name", color="#cfa0df", image="gb")
 define u = Character("???", color="#5e7b9e", image="u")
 define t = Character("Teacher", color="#b5b5b5", image="t")
+define rando = Character("?", color="#d1f024")
 
 define choose_character=Transform("choose_character.png")
 image bg sept=Transform("bg_1sept.png")
@@ -36,12 +37,7 @@ image u smile=Transform("images/bb/u_smile.png")
 image u idle=Transform("images/bb/u_idle.png")
 image u shadow=Transform("images/bb/u_shadow.png")
 #define bg_closehallway=Transform("images/???", zoom=0.33)
-define alarm_background="alarm_background.png"
-define rando = Character("?", color="#d1f024")
 
-define choose_character="choose_character.png"
-image bg bg_1sept="bg_1sept.png"
-image bg bg_black="bg_black.png"
 image bg alarm_background="alarm_background.png"
 
 image bg gb_doing_makeup="gb/applyup.png"

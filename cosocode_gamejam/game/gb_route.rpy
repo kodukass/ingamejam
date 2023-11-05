@@ -3,10 +3,10 @@ init python:
 
 label gb_route:
     scene placeholder_bg
-    scene bg bg_1sept with Dissolve(1.0)
+    scene bg sept with Dissolve(1.0)
     pause
 
-    scene bg bg_black with Dissolve(1.0)
+    scene bg black with Dissolve(1.0)
     #play sound "audio/???"                #(Alarm goes off at 6:00) #(no minigame/pressing it once, bro just wakes up)
     #show bg gb_bed_wakeup with dissolve          #gets up
     gb "{i}Right! First day! Time for me to make a memorable entrance!{/i}"
@@ -16,7 +16,7 @@ label gb_route:
     show bg gb_mirror_face with dissolve                #(studies face with stubble)
     #play sound "audio/???"                #(sigh sound effect)
     gb "{i}Oh, of course... this ole thing...{/i}"
-    show bg bg_black with dissolve                
+    show bg black with dissolve                
     pause 1.0
     #play sound "audio/???"                #(shaving and water sound effects)
     show bg gb_clean_shaven with dissolve                #(clean shaven)
@@ -34,12 +34,18 @@ label gb_route:
     #show bg gb_makeup_result with dissolve                #(show result. Not perfect, room to improve, but its okay)
     show bg bg_black with dissolve  
     gb "{i}There we go! Now...{/i}"
+    window hide
+    show bg black with dissolve 
+    #play sound "audio/??"                 #picture 
+    show gb_selfie with dissolve 
+    pause 1.0
+    hide gb_selfie with dissolve 
     #show bg gb_clock with dissolve                #(look at time)
     #play sound "audio/??" 
     gb "{i}Oh shoot! Gotta hurry{/i}"
     #play sound "audio/??"                 #(taking bag and running sound effects)
 
-    scene bg_black with Dissolve(1.0)
+    scene bg black with Dissolve(1.0)
     play sound "audio/girlbeastschool.wav"
     #show bg gb_school with dissolve                #(show school)
     gb "{i}Here we go again{/i}"
@@ -58,8 +64,19 @@ label gb_route:
     rando "I know you're gay and all"
     rando "Everyone knows"
     rando "But could you even try to pretend you're normal?"
-    rando "No?"
+    gb "No?"
                                         #(insert fake smile minigame)
+    image smile animated:
+            "happy click"
+            pause 0.4
+            "neutral click"
+            pause 0.4
+            "bad click"
+            pause 0.4
+            "neutral click"
+            pause 0.4
+            repeat
+    show smile animated with dissolve
 
     menu:
         "{i}I manage to keep up a fake smile{/i}":
@@ -69,7 +86,7 @@ label gb_route:
             jump gb_fail
 
 label gb_succeed:
-    show bg gb_smile_success with dissolve 
+    scene bg gb_smile_success with Dissolve (0.1)
     #play sound "audio/??"                 #(laughing)
     gb "{i}It's okay, he's just joking around. He thinks its funny, so…I should too! I did choose to do this myself. Anything they say to me is my own fault, not theirs! I won't bring it up.{/i}"
     gb "Yeah yeah. Well, I just thought it could be fun! Wanted to try it out haha. No harm in that!"
@@ -83,7 +100,7 @@ label gb_succeed:
     jump gb_continue
 
 label gb_fail:
-    show bg gb_smile_fail with dissolve                #(unbelievable smile/no smile)
+    scene bg gb_smile_fail with dissolve                #(unbelievable smile/no smile)
     rando "What? You offended? Christ you're sensitive, Matteo. Fucking crybaby."
     gb "I'm-"
     gb "{i}Gosh he's right. I brought this upon myself. I shouldn't feel this upset about it. God damn it.{/i}"
@@ -112,7 +129,7 @@ label gb_continue:
     show bg gb_hallway with dissolve                #(goes to class)
     #play sound "audio/??"                 #(quiet chatter)
 
-    scene bg_black with Dissolve(1.0)
+    scene bg black with Dissolve(1.0)
     show bg gb_class with dissolve                #(kui oleks pilti klassist, gb istumas)
     pause 0.5
 
@@ -126,6 +143,8 @@ label gb_continue:
     nvl_narrator "{i}But…{/i}" #kas need on ka nvl mode või läheb tagasi tavalisse kasti korra, nagu ta tõstaks pead? siis võiks image ka olla
     nvl_narrator "{i}But she's my friend! Come on, I can do this.{/i}"
     gb_nvl "Yep! What's up?" #kas ma saaks need narration sõnumid nagu. ära kaotada kui ta vastab?
+                                        #(insert consoling minigame)
+                                        #(success bar on the side?)
                                         #(insert consoling minigame)
                                         #(success bar on the side?)
 
@@ -193,7 +212,7 @@ label gb_lie:
     show bg gb_class_frown with dissolve                   #gb putting the phone down and frowning?
     gb "{i}Yeah... its better if she thinks everything has gone perfectly{/i}"
 
-    scene bg_black with Dissolve(1.0)
+    scene bg black with Dissolve(1.0)
     play music "audio/girlbeastcalm.wav"
     show bg gb_removing_makeup with dissolve                   #(look in mirror and take off makeup,look at self)
     gb "{i}God I really am an idiot. What was I thinking! This whole makeup idea was ridiculous!{/i}"
@@ -208,7 +227,7 @@ label gb_lie:
     window hide
     show bg gb_mirror_mean with dissolve                   #(insert mirror scene- more mean)
     pause 4.0
-    scene bg bg_black with Dissolve(1.0)                  #(sleep time, prob black screen?)
+    scene bg black with Dissolve(1.0)                  #(sleep time, prob black screen?)
 
     return
 
@@ -221,7 +240,7 @@ label gb_truth:
     show bg gb_class_frown with dissolve                   #scene change, of gb putting the phone down and smiling?
     gb "{i}That dork...she always says the dumbest, but nicest things{/i}"
     
-    scene bg_black with Dissolve(1.0)
+    scene bg black with Dissolve(1.0)
     play music "audio/girlbeastcalm.wav"
     show bg gb_removing_makeup with dissolve                     #(look in mirror and take off makeup,look at self)
     gb "{i}Hm. I suppose I really didn't do half bad.{/i}"
@@ -231,7 +250,7 @@ label gb_truth:
     window hide
     show bg gb_mirror_okay with dissolve                   #(insert mirror scene-less mean)
     pause 4.0
-    scene bg bg_black with Dissolve(1.0)                   #(sleep time, prob black screen?)
+    scene bg black with Dissolve(1.0)                   #(sleep time, prob black screen?)
     pause 1.0
 
     return
